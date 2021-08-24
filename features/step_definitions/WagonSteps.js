@@ -21,7 +21,7 @@ Given('a carroça sempre iniciando vazia', function () {
 
 Given('o passageiro de nome <name> que está com saúde <isHealthy> e tem <food> refeições', function (dataTable) {
     let data = dataTable.hashes();
-
+  
     data.forEach(passenger => {
         let values          = Object.values(passenger)
         let newPassenger    = new Traveler(...values);
@@ -40,15 +40,18 @@ When('me for perguntado a quantidade de assentos disponíveis', function () {
 });
 
 When('me perguntarem o total de refeições a bordo', function () {
+    
     totalFood = carroca.totalFood();
 });
 
 When('me perguntarem se devemos fazer quarentena', function () {
     shouldQuarantine = carroca.shouldQuarantine();
+   
 });
 
 When('o passageiro {string} tentar subir a bordo', function (string) {
     let comingAboard = passengers.find(passenger => passenger.name === string);
+    
     triedToComeAboard = comingAboard;
     carroca.join(comingAboard);
 });

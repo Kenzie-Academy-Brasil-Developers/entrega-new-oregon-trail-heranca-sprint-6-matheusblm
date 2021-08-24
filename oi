@@ -1,0 +1,29 @@
+
+    Cenário: Um viajante não consegue subir a bordo
+        Dada a entrada do passageiro "Sergio"
+        E a entrada do passageiro "Simone"
+        E a entrada do passageiro "Samuel"
+        E a entrada do passageiro "Diego"
+        E a entrada do passageiro "Diana"
+        Quando o passageiro "Sandra" tentar subir a bordo
+        Então ele não deverá ser adicionada à lista de passageiros
+
+    Cenário: A carroça tem pessoas doentes e deverá fazer quarentena
+        Dada a entrada do passageiro "Sergio"
+        E a entrada do passageiro "Diana"
+        Quando me perguntarem se devemos fazer quarentena
+        Então a resposta deverá ser Sim
+
+
+    Cenário: A carroça não tem pessoas doentes e não deverá fazer quarentena
+        Dada a entrada do passageiro "Sergio"
+        E a entrada do passageiro "Sandra"
+        Quando me perguntarem se devemos fazer quarentena
+        Então a resposta deverá ser Não
+
+
+    Cenário: Contagem do total de refeições
+        Dada a entrada do passageiro "Sergio"
+        E a entrada do passageiro "Simone"
+        Quando me perguntarem o total de refeições a bordo
+        Então responderei que temos 8 refeições

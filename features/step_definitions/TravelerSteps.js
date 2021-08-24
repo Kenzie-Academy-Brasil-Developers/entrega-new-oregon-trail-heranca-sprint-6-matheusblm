@@ -38,9 +38,9 @@ Then('a quantidade de refeições deve ser igual a {int}', function (int) {
 });
 
 Then('o Traveler não ficará doente', function () {
-    assert.strictEqual(viajante.isHealthy, true)
+    assert.strictEqual(viajante._isHealthy, true)
 });
 
 Then('o Traveler ficará doente', function () {
-    assert.strictEqual(viajante.isHealthy, false)
+    assert.strictEqual(viajante._isHealthy, false)
 });
